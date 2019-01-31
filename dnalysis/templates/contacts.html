@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%block content %}
+<div class="container-fluid">  
+  <div class="contact">
+    <h1 class="">Contact Us</h1>
+  </div>
+  <div class="container">
+    <h1 class="text-center py-5">Get in touch</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Form</h2>
+      </div>
+      <div class="col-md-4 bg-light py-5 ">
+        <span><i class="fas fa-phone fa-2x" data-fa-transform="rotate-280 " style="color:coral"></i></span> <a href="+254720132613">+254720132613</a> <br><br>
+        <span><i class="far fa-envelope fa-2x" ></i></span> <a href="mailto:dnalysis@gmail.com">dnalysis@gmail.com</a> <br><br>
+        <a href=""><span><i class="fab fa-facebook-square fa-3x"></i></span><span class="fb">Facebook</span></a>
+        <a href=""><span><i class="fab fa-twitter-square fa-3x"></i></span><span class="fb">Twitter</span></a>
+        <a href=""><span><i class="fab fa-linkedin fa-3x"></i></span><span class="fb">LinkedIn</span></a>
+
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br>
+</div>
+<div class="footer bg-dark text-white text-center p-3 ">
+  <footer class="d-inline mb-3"><p>&copy 2019 Dnalysis. All rights reserved</p></footer>
+  <a class="d-inline" href="{% url 'about'%} ">About</a>
+</div>
+{%endblock%}
