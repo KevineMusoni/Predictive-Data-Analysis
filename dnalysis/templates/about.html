@@ -1,0 +1,91 @@
+{%extends 'base.html'%}
+{%block content %}
+  <div class="container-fluid" id="section1">
+    <h1 class="text-center text-black py-5" id="head">About us</h1>
+  </div>
+  <br><br><br><br><br><br>
+  <div class="container" id="section2">
+    <h1 class="text-center" id="title">Our Story</h1>
+    <div class="row pt-5">
+      <div class="col-sm-1"></div>
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-title">Poor data management systems</p>
+            <p>Several businesses and entreprises have suffered great losses, sometimes really massive losses that led to some of them shutdown. Several market research do reveal that this is majorly caused by poor data management systems. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="card" id="img">
+          <img  src="../static/images/img2.jpg" alt="" height="210px">
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+    <div class="row pt-5">
+      <div class="col-sm-1"></div>
+      <div class="col-md-5">
+        <div class="card" id="img" >
+          <img src="../static/images/graph.jpeg" alt="" height="210px">
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-title">We are here to help!</p>
+            <ul>
+              Dnalysis...
+              <ol>- Analyzes your data,</ol>
+              <ol>- Gives you future market predictions,</ol>
+              <ol>- Help you make outstanding decisions, </ol>
+              <ol>- And we help you manage procurements.</ol>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+  </div>
+ <br><br><br><br><br><br> 
+  <div id="section3">
+    <div class="container">
+      <h1 class="text-center" id="title">Team</h1>
+      <div class="row pt-5">
+        <div class="col-md-3">
+          <div class="pl-5">
+            <img  class="team" src="../static/images/kevine.jpg" alt="Kevine">
+          </div>
+          <h3>Kevine Musoni</h3>
+          <p class="team">CEO</p>
+        </div>
+        <div class="col-md-3">
+          <div class="pl-3">
+            <img class="team " src="../static/images/kheisa.png" alt="Kheisa">
+          </div>
+          <h3>Fred Kheisa</h3>
+          <p class="team">Team technical lead</p>
+        </div>
+        <div class="col-md-3">
+          <div class="pl-5">
+            <img class="team " src="../static/images/diana.png" alt="Diana">
+          </div>
+          <h3>Diana Mulyungi</h3>
+          <p class="team">Frontend engineer</p>
+        </div>
+        <div class="col-md-3">
+          <div class="pl-5">
+            <img class="team " src="../static/images/ktn.jpeg" alt="Katana">
+          </div>
+          <h3>Raphael Katana</h3>
+          <p class="team">COO</p>
+        </div>
+      </div>  
+    </div>
+  </div> <br><br><br><br>
+  <div class="footer bg-dark text-white text-center p-3">
+    <footer class="d-inline "><p>&copy 2019 Dnalysis. All rights reserved</p></footer>
+    <a class="d-inline" href="{% url 'contacts'%} ">Contacts</a>
+  </div>
+{%endblock%}
