@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Lobster');
+
+#section1{
+  background-image: url('img1.jpg');
+  height:40vh;
+  background-size: cover;
+ opacity: 0.6;
+}
+ h1{
+  background: linear-gradient(green,rgb(17, 17, 17));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  text-decoration: underline white;
+
+}
+#title{
+  font-size: 25px;
+  font-family: 'Lobster', cursive;
+}
+#head{
+  font-family: 'Dancing Script', cursive;
+  color: black;
+  font-size: 50px;
+}
+img.team{
+  height:100px;
+  width: 100px;
+  border-radius: 50%;
+}
+img.team:hover ~ p.team{
+ display:block;
+ color:coral;
+}
+p.team{
+  display: none;
+}
