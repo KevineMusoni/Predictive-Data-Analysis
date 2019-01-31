@@ -1,23 +1,21 @@
 from django import forms
-from .models import Registration, NumberofBuses, NumberofMinibuses, NumberofMatatu
 
+from .models import Register,Space,Dailys
 
-class RegistrationForm(forms.ModelForm):
+class RegisterForm(forms.ModelForm):
     class Meta:
-        model = Registration
-        exclude = ['business', 'contact', 'date_today']
+        model = Register
+        fields = ('business_name','contact', 'email','description')
 
-class NumberofMinibusesForm(forms.ModelForm):
-   class Meta:
-       model = NumberofMinibuses
-       fields = ['rating']
+class SpaceForm(forms.ModelForm):
+    class Meta:
+        model = Space
+        exclude =['register','posted_on']
 
-class NumberofMatatuForm(forms.ModelForm):
-   class Meta:
-       model = NumberofMatatu
-       fields = ['rating']
 
-class NumberofBusesForm(forms.ModelForm):
-   class Meta:
-       model = NumberofBuses
-       fields = ['rating']
+class DailysForm(forms.ModelForm):
+    class Meta:
+        model = Dailys
+        exclude =['register','posted_on']
+
+
