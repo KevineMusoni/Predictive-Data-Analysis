@@ -1,4 +1,5 @@
 {%extends 'base.html'%}
+{%load bootstrap4%}
 {%block content %}
 <div class="container-fluid">  
   <div class="contact">
@@ -9,6 +10,7 @@
     <div class="row">
       <div class="col-md-6">
         <h2>Form</h2>
+        
       </div>
       <div class="col-md-4 bg-light py-5 ">
         <span><i class="fas fa-phone fa-2x" data-fa-transform="rotate-280 " style="color:coral"></i></span> <a href="+254720132613">+254720132613</a> <br><br>
@@ -16,9 +18,30 @@
         <a href=""><span><i class="fab fa-facebook-square fa-3x"></i></span><span class="fb">Facebook</span></a>
         <a href=""><span><i class="fab fa-twitter-square fa-3x"></i></span><span class="fb">Twitter</span></a>
         <a href=""><span><i class="fab fa-linkedin fa-3x"></i></span><span class="fb">LinkedIn</span></a>
-
       </div>
     </div>
+    
+    <form action="" method="POST" enctype="text/plain">
+      {% csrf_token %}
+      
+      <caption>Daily data management</caption>
+      <table>    
+        <tr>
+          <th>Day</th>
+          <th>No. of passengers</th>
+          <th>No. of trips</th>
+          <th>Total Income</th>
+        </tr>
+        <tr>
+          <td>{{form.day}} </td>
+          <td>{{form.no_of_passengers}} </td>
+          <td>{{form.no_of_trips}} </td>
+          <td>{{form.income}} </td>
+        </tr>
+      </table>
+      <input type="submit" name="" id="" value="Submit">
+    </form>
+    
   </div>
   <br><br><br><br><br><br>
 </div>
