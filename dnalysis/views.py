@@ -8,3 +8,8 @@ def about(request):
 def contacts(request):
     title='Dnalysis-Reach to us'
     return render(request,'contacts.html',{'title':title})
+
+def home_page(request):
+    
+    return render(request,'home.html',locals())
+
