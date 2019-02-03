@@ -3,7 +3,21 @@ body{
 }
 .business{
     position: absolute;
+    font-size: 15px;
     left: 500px;
     top: 15%;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.space{
+    position: absolute;
+    font-size: 30px;
+    left: 510px;
+    top: 17%;
+}
+
+.data{
+    position: absolute;
+    font-size: 30px;
+    left: 520px;
+    top: 19%;
 }
