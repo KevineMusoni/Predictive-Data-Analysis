@@ -1,6 +1,7 @@
-virtual/
-*.pyc
+virtual/git 
+*.pyc 
+.vscode/
 __pycache__/
 db.sqlite3
-.vscode/
-.env
+virtual/
+

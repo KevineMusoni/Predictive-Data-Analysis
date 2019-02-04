@@ -1,6 +1,5 @@
 from django import forms
-
-from .models import Register,Space,Dailys
+from .models import Register,Space,Dailys,Data
 
 class RegisterForm(forms.ModelForm):
     class Meta:
@@ -18,4 +17,9 @@ class DailysForm(forms.ModelForm):
         model = Dailys
         exclude =['register','posted_on']
 
+
+class DataForm(forms.ModelForm):
+    class Meta:
+        model= Data
+        fields= '__all__'
 
