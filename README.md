@@ -38,4 +38,4 @@ https://github.com/KevineMusoni/Predictive-Data-Analysis.git
 {Run the web page once again incase of any errors,
 suggestions
 send an email: kevinenicky@gmail.com}
-Copyright (c) {2018} **{Kevine Musoni}**
+Copyright (c) {2019} **{Kevine Musoni}**
