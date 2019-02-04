@@ -37,12 +37,10 @@
         function __gaTrackerIsOptedOut() {
             return document.cookie.indexOf(disableStr + '=true') > -1;
         }
-
         /* Disable tracking if the opt-out cookie exists. */
         if (__gaTrackerIsOptedOut()) {
             window[disableStr] = true;
         }
-
         /* Opt-out function */
         function __gaTrackerOptout() {
             document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
@@ -90,7 +88,6 @@
                     try {
                         f.hitCallback();
                     } catch (ex) {
-
                     }
                 };
                 __gaTracker.create = function () {
