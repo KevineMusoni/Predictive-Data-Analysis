@@ -12,7 +12,9 @@ pip3 install -r requirements.txt
 python3.6 -m venv virtual
 ```
 ## Running the server
+```
 python3.6 manage.py runserver
+```
 
 ## Clone Repository
 ```
