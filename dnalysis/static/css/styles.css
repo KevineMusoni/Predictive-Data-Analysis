@@ -1,0 +1,61 @@
+/* styles */
+
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Lobster');
+
+#section1{
+  background-image: url('img1.jpg');
+  height:40vh;
+  background-size: cover;
+ opacity: 0.6;
+}
+.contact{
+  background-image: url('../images/contacts.jpeg');
+  background-size: cover;
+  height: 40vh;
+}
+#title{
+  font-size: 25px;
+  font-family: 'Lobster', cursive;
+}
+#head{
+  font-family: 'Dancing Script', cursive;
+  color: black;
+  font-size: 50px;
+}
+img.team{
+  height:100px;
+  width: 100px;
+  border-radius: 50%;
+}
+img.team:hover ~ p.team{
+ display:block;
+ color:coral;
+}
+p.team{
+  display: none;
+}
+.fab.fa-facebook-square{
+  color:#3b5998;
+}
+.fab.fa-twitter-square{
+  color:#55acee
+}
+.fab.fa-linkedin{
+  color:#0077b5
+}
+.far.fa-envelope{
+  color:#ea4335
+}
+.fb{
+  display:none;
+  
+  
+}
+span:hover ~.fb{
+  color:red;
+  display:inline;
+  transition: width 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.5s;
+}

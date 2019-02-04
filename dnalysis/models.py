@@ -13,7 +13,6 @@ class Register(models.Model):
     description = models.TextField()
 
 
-
 class Space(models.Model):
     """
     Class that contains space for analysis, to be collected.
@@ -23,6 +22,7 @@ class Space(models.Model):
     matatus = models.CharField(max_length = 20)
     posted_on = models.DateTimeField(auto_now_add=True)
     register = models.ForeignKey(Register, on_delete=models.CASCADE)
+
 
 class Dailys(models.Model):
     """

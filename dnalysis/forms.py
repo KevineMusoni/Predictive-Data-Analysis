@@ -6,7 +6,6 @@ class RegisterForm(forms.ModelForm):
         model = Register
         fields = ('business_name','contact', 'email','description')
 
-
 class SpaceForm(forms.ModelForm):
     class Meta:
         model = Space
