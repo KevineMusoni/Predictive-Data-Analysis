@@ -1,0 +1,26 @@
+{%extends 'register/base.html'%}
+{% load static %}
+{% load bootstrap3%}
+{% load bootstrap4%}
+<link rel="stylesheet" href="{%static 'css/registration.css'%}">
+
+{% block content %}
+{{block.super}}
+
+
+<div class="data w3-animate-right">
+    <div class="card" style="width: 48rem; border-radius: 8px;">
+        <div class="card-body">
+            <h5 class="card-title">Total Vehicles</h5>
+            <form class="col-xs-7" action="{%url 'register'%} " method="POST" enctype="text/plain">
+                <h3 class="text-center text-primary">Data Form</h3>
+                {% csrf_token%} {% bootstrap_form form2%}
+                <a  type="submit" href="#" class="btn btn-primary">Done!</a>
+                <input type="submit" >
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
