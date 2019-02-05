@@ -25,7 +25,7 @@
 
     <!-- The Modal -->
     <div class="modal w3-animate-right" id="myModal">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
 
                 <!-- Modal Header -->
@@ -58,7 +58,7 @@
 
     <!-- The Modal -->
     <div class="modal w3-animate-left" id="myModal2" >
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg" >
             <div class="modal-content">
 
                 <!-- Modal Header -->
@@ -94,11 +94,16 @@
     </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
+
 <script>
-$(document).ready(function(){
-  $("#hide").click(function(){
-    $("business").hide();
-  });
+
+$("#hide").click(function(){
+  $(".business").hide();
+});
+
+$("#hide2").click(function(){
+  $("#myModal").hide();
 });
 
 </script>
