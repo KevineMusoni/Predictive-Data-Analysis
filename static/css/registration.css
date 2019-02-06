@@ -1,5 +1,6 @@
 body{
     background-image: url("../img/data1.jpg");
+    size: cover;
 }
 .business{
     position: absolute;

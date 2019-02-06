@@ -43,7 +43,7 @@
                                 <form class="col-xs-7;" action="{%url 'register'%} " method="POST" enctype="text/plain">
                                     {% csrf_token%} {% bootstrap_form form1%}
                                 </form>
-                                <a value='submit' type="submit" href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Next</a>
+                                <a id="hide2" value='submit' type="submit" href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Next</a>
                             </div>
                         </div>
                     </div>

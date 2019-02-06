@@ -42,7 +42,7 @@ class Dailys(models.Model):
         ('January', 'January'),
         ('February', 'February'),
         ('March', 'March'),
-        ('March', 'March'),
+        ('April', 'April'),
         ('May', 'May'),
         ('June', 'June'),
         ('July', 'July'),
