@@ -1,41 +1,108 @@
-{%extends "registration/base.html"%}
-{% load bootstrap4 %}
+{%extends 'register/base.html'%}
+{% load static %}
+{% load bootstrap4%}
+<link rel="stylesheet" href="{%static 'css/registration.css'%}">
+
 {% block content %}
+{{block.super}}
+
 <div class="container">
-    <div class="row">
-        <!-- Empty div -->
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            {% if form.errors %}
-            <p> Password or Username is incorrect </p>
-            {% endif %}
-            <div class="panel panel-default">
+    <div class="business w3-animate-right">
+        <div class="card" style="width: 48rem; border-radius: 8px;">
+            <div class="card-body">
+                <h5 class="card-title">Business Registration</h5>
+                <form action="{%url 'register'%} " method="POST" enctype="text/plain">
+                    <h2></h2>
+                    {% csrf_token %} {% bootstrap_form form %}
+                </form>
+                <button id="hide" type="submit" href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">DONE
+                    .</button>
+            </div>
+        </div>
+    </div>
 
-                <div class="panel-heading">
-                    <h3 class="text-center">Sign In</h3>
+
+    <!-- The Modal -->
+    <div class="modal w3-animate-right" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 class="text-center text-primary">Space form</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="panel-body">
 
-                    <form action="/accounts/login/" method="post">
-                        {% csrf_token %}
-                        {% bootstrap_form form%}
-
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-primary btn-sm" value="Login">
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class=" w3-animate-left">
+                        <div>
+                            <div class="card-body">
+                                <h5 class="card-title">Total Vehicles</h5>
+                                <form class="col-xs-7;" action="{%url 'register'%} " method="POST" enctype="text/plain">
+                                    {% csrf_token%} {% bootstrap_form form1%}
+                                </form>
+                                <a value='submit' type="submit" href="#" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#myModal2">Next</a>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
 
-                        <input type="hidden" name="next" value="{{next}}">
 
-                    </form>
+    <!-- The Modal -->
+    <div class="modal w3-animate-left" id="myModal2">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
 
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 class="text-center text-primary">Space form</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="">
+                        <div class=" w3-animate-right">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Vehicles</h5>
+                                    <form class="col-xs-7" action="{%url 'register'%} " method="POST" enctype="text/plain">
+                                        <h3 class="text-center text-primary">Data Form</h3>
+                                        {% csrf_token%} {% bootstrap_form form2%}
+                                        <input type="submit">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button submit" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
 
             </div>
-
         </div>
-        <!-- empty div -->
-        <div class="col-md-4"></div>
     </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+    $("#hide").click(function () {
+        $(".business").hide();
+    });
+    $("#hide2").click(function () {
+        $("#myModal").hide();
+    });
+</script>
 
 {% endblock %}

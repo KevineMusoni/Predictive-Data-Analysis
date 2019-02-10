@@ -1,0 +1,26 @@
+body{
+    background-image: url('../images/data.jpg');
+    size: cover;
+    background-size: cover;
+}
+.business{
+    position: absolute;
+    font-size: 15px;
+    top: 3%;
+    left: 40%;
+    opacity: 0.8;
+    /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.modal{
+    position: absolute;
+    font-size: 15px;
+    right: 40%;
+    top: 3%;
+}
+
+.data{
+    position: absolute;
+    font-size: 15px;
+    right: 40%;
+    top: 3%;
+}
