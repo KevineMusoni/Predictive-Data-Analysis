@@ -26,7 +26,6 @@ class Space(models.Model):
     Class that contains space for analysis, to be collected.
     """
     minibuses = models.PositiveIntegerField()
-    minibuses = models.PositiveIntegerField()
     matatus = models.PositiveIntegerField()
     posted_on = models.DateTimeField(auto_now_add=True)
     register = models.ForeignKey(Register, on_delete=models.CASCADE)
