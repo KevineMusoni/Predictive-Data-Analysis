@@ -1,0 +1,25 @@
+{%extends 'register/base.html'%}
+{%block content%}
+{% load bootstrap4%}
+
+
+<div class="container">
+    <div class="business w3-animate-right">
+        <div class="card" style="width: 48rem; border-radius: 8px;">
+            <div class="card-body">
+                <h5 class="card-title">Business Registration</h5>
+                <!-- <form action="{url 'register'}" method="post">
+                    {%csrf_token%}
+                    {% bootstrap_form form %}
+                    <input type="submit" value="Submit">
+                </form> -->
+                <form action="{%url 'register'%} " method="POST">
+
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    <input id="hide" type="submit" class="btn btn-primary" value="next">
+                </form>
+            </div>
+        </div>
+    </div>
+{%endblock%}

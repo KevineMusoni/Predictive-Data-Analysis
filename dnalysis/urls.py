@@ -6,5 +6,8 @@ from . import views
 urlpatterns=[
     url('^$',views.home_page,name = 'home_page'),
     url('^register/', views.registration, name='register'),
+    url('^spacing/', views.space, name='spacing'),
+    url('^dailys/', views.daily, name='dailys'),
+    url('^predict/', views.prediction, name='predict'),
 
 ]

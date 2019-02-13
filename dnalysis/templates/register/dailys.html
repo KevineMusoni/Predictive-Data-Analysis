@@ -1,0 +1,36 @@
+{%extends 'register/base.html'%}
+{% load static %}
+{% load bootstrap4%}
+<link rel="stylesheet" href="{%static 'css/registration.css'%}">
+
+{% block content %}
+{{block.super}}
+
+
+<div class="container">
+    <div class="business w3-animate-right">
+        <div class="card" style="width: 48rem; border-radius: 8px;">
+            <div class="card-body">
+                <h5 class="card-title">Business Registration</h5>
+                <form action="{%url 'dailys'%} " method="POST">
+
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    <input id="hide" type="submit" class="btn btn-primary" value="submit">
+                </form>
+
+                <a href="{% url 'predict' %}">display</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+        $("#hide").click(function () {
+            $(".business").hide();
+        });
+        $("#hide2").click(function () {
+            $("#myModal").hide();
+        });
+    </script>
+    {% endblock %}
