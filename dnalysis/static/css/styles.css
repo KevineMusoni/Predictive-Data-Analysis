@@ -57,3 +57,22 @@ span:hover ~.fb{
   transition-timing-function: ease-in-out;
   transition-delay: 0.5s;
 }
+
+.button{
+display: inline-block;/*avoids merging*/
+font-size: 1.15rem;
+text-decoration:none;
+text-transform: uppercase;
+border-width: 2px;
+border-style: solid;
+padding: .5em 1.75em;
+}
+.button-accent{
+color: #00ff6c;
+border-color: #00ff6c;
+}
+.button-accent:hover,
+.button-accent:focus{
+background:#00ff6c;
+color: #232323;
+}

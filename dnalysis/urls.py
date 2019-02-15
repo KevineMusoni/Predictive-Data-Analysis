@@ -9,5 +9,6 @@ urlpatterns=[
     url('^spacing/', views.space, name='spacing'),
     url('^dailys/', views.daily, name='dailys'),
     url('^predict/', views.prediction, name='predict'),
+    url('^fut/', views.future, name='fut'),
 
 ]

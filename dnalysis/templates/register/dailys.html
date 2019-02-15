@@ -16,10 +16,10 @@
 
                     {% csrf_token %}
                     {% bootstrap_form form %}
-                    <input id="hide" type="submit" class="btn btn-primary" value="submit">
+                    <!-- <input id="hide" type="submit" class="btn btn-primary" value="submit"> -->
                 </form>
 
-                <a href="{% url 'predict' %}">display</a>
+                <a href="{% url 'predict' %}" id="hide" type="submit" class="btn btn-primary">display</a>
             </div>
         </div>
     </div>

@@ -16,9 +16,9 @@
 
                     {% csrf_token %}
                     {% bootstrap_form form %}
-                    <input id="hide" type="submit" class="btn btn-primary" value="submit">
+                    <!-- <input id="hide" type="submit" class="btn btn-primary" value="submit"> -->
                 </form>
-                <a href="{% url 'dailys'%}">next</a>
+                <a href="{% url 'dailys'%}" id="hide" type="submit" class="btn btn-primary">submit</a>
             </div>
         </div>
     </div>

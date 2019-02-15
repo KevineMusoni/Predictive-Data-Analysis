@@ -1,0 +1,48 @@
+{%extends 'base.html'%}
+{%block content %}
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+
+    Highcharts.chart('container', {
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Business Data Prediction/Month'
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'business data'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: false
+            }
+        },
+        series: [{
+            name: 'Income',
+            data: [200878,8709809,897984,445455,5345435,5345325,34543,24545,245345,245345,45455,245345]
+        }, {
+            name: 'no_of_trips',
+            data: [3456,2565,62656,2646,256546,546245656,256554656,256546456,76876876,57867896,243535,2435435]
+        },
+        {
+            name: 'no_of_passengers',
+            data: [34353425,1345345,25345,2345345,435345,3245345,3245345,2345345,345345,145435,3145435,2346567]
+        }
+        ]
+    });
+</script>
+{%endblock%}

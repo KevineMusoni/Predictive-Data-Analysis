@@ -1,8 +1,28 @@
+# pylab inline
 from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from .forms import RegisterForm,SpaceForm,DailysForm
-from .models import Register
+from django.core import serializers
+from .models import Register, Dailys
+from datetime import datetime
+import pandas as pd
+import json, time
+
+MONTHS_TO_NUMBER = dict((
+        ('January', 1),
+        ('February', 2),
+        ('March', 3),
+        ('April', 4),
+        ('May', 5),
+        ('June', 6),
+        ('July', 7),
+        ('August', 8),
+        ('September', 9),
+        ('October', 10),
+        ('November', 11),
+        ('December', 12),
+    ))
 
 # Create your views here.
 def home_page(request):
@@ -57,9 +77,27 @@ def space(request):
 
 def prediction(request):
         title='prediction'
-        return render(request, 'register/predict.html', {'title': title})
-
-
+        data = serializers.serialize("json", Dailys.objects.all(), fields = ('income', 'month', 'no_of_passengers', 'no_of_trips'))
+        data = json.loads(data)
+        no_of_passengers = []
+        no_of_trips = []
+        income = []
+        print(data)
+        for da in data:
+                a = da["fields"]
+                a['month'] = MONTHS_TO_NUMBER[a['month']]
+                time_ha = time.mktime(datetime(year=2018, month=a['month'], day=1).timetuple())
+                income.append((time_ha, a['income']))
+                no_of_passengers.append((time_ha, a['no_of_passengers']))
+                no_of_trips.append((time_ha, a['no_of_trips']))
+        # data = pd.DataFrame(clean_data)
+        # data.hist(data, width=.8, range=(1,12))
+        
+        return render(request, 'register/predict.html', locals())
+        
+def future(request):
+        title= 'future'
+        return render(request, 'register/future.html', locals())
 def daily(request):
         print("Above")
         if request.method == 'POST':
